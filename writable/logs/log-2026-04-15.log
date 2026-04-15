@@ -1,0 +1,87 @@
+ERROR - 2026-04-15 09:28:01 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'lab10', 3306, '', 0)
+#1 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('dianaparinas105...', 'users.email', Array)
+#6 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Validation\Validation.php(345): CodeIgniter\Validation\StrictRules\Rules->is_unique('dianaparinas105...', 'users.email', Array, NULL, 'email')
+#7 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Validation\Validation.php(210): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dianaparinas105...', Array, Array, 'email')
+#8 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Controller.php(136): CodeIgniter\Validation\Validation->run()
+#9 C:\xampp\htdocs\lab10\app\Controllers\AuthController.php(61): CodeIgniter\Controller->validate(Array)
+#10 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\CodeIgniter.php(951): App\Controllers\AuthController->register()
+#11 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#12 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\lab10\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#17 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('dianaparinas105...', 'users.email', Array)
+#5 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Validation\Validation.php(345): CodeIgniter\Validation\StrictRules\Rules->is_unique('dianaparinas105...', 'users.email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Validation\Validation.php(210): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dianaparinas105...', Array, Array, 'email')
+#7 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Controller.php(136): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\lab10\app\Controllers\AuthController.php(61): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\CodeIgniter.php(951): App\Controllers\AuthController->register()
+#10 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#11 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\lab10\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\xampp\htdocs\lab10\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+CRITICAL - 2026-04-15 09:28:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(175): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(187): CodeIgniter\Validation\Rules->is_unique('dianaparinas105@gmail.com', 'users.email', [...])
+ 5 SYSTEMPATH\Validation\Validation.php(345): CodeIgniter\Validation\StrictRules\Rules->is_unique('dianaparinas105@gmail.com', 'users.email', [...], null, 'email')
+ 6 SYSTEMPATH\Validation\Validation.php(210): CodeIgniter\Validation\Validation->processRules('email', 'email', 'dianaparinas105@gmail.com', [...], [...], 'email')
+ 7 SYSTEMPATH\Controller.php(136): CodeIgniter\Validation\Validation->run()
+ 8 APPPATH\Controllers\AuthController.php(61): CodeIgniter\Controller->validate([...])
+ 9 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\AuthController->register()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\lab10\\public\\index.php')
+DEBUG - 2026-04-15 09:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:42:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:42:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 09:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:49:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:49:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:50:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-04-15 13:50:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
